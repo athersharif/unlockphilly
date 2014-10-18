@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Unlock Philly - <%= page_title %></title>
+		<title>Mockup - <%= page_title %></title>
 
-		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="Mapping wheelchair accessible stations, elevator outages, pubs, restaurants, shops and more in Philadelphia">
 		<meta name="keywords" content="philadelphia, accessibility, accessible, abilities, wheelchair, elevator, outages, disability, disabilities, stations, SEPTA, transit, bars, restaruants, cafes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -39,62 +39,12 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" rel="home" href="/"><img style="max-width:210px; margin-top: -7px;" src="/images/logo/unlock_logo_aug_14_flipped.png" alt="Unlock_Philly logo" title="Unlock Philly Logo" /></a>
+						<a class="navbar-brand" rel="home" href="/"><img style="max-width:210px; margin-top: -7px;" src="/images/logo/mockup.png" alt="Usability mockup" title="Usability mockup" /></a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
-							<li <% if page=="mapper" %>class="active"<% end %>>
-								<a href="/">Stations & Venues</a>
-							</li>
-							<li <% if page=="n3rdstreet" %>class="active"<% end %>>
-								<a href="/n3rdstreet">Case study: N3rd St</a>
-							</li>
-							<li <% if page=="routechecker" %>class="active"<% end %>>
-								<a href="/routechecker">Route Checker</a>
-							</li>
-							<li <% if page=="about" %>class="active"<% end %>>
-								<a href="/about">About</a>
-							</li>
-						</ul>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a href="https://twitter.com/unlockphilly" target='_blank'>Follow us <img style="max-width:25px; margin-top: -7px;" src="/images/logo/Twitter_logo_blue.png" alt="Twitter logo" title="Twitter Logo" /></a>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Links<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li role="presentation" class="dropdown-header">Resources</li>
-									<li role="presentation">
-										<a href="http://www.septa.org/access/vis-impaired.html" target='_blank'>SEPTA Info for visually impaired customers</a>
-									</li>
-									<li role="presentation">
-										<a href="http://www.septa.org/access/" target='_blank'>Accessible SEPTA</a>
-									</li>
-									<li role="presentation">
-										<a href="http://www.libertyresources.org/" target='_blank'>Liberty Resources - Philadelphia Center for Independent Living</a>
-									</li>
-									<li role="presentation">
-										<a href="https://twitter.com/PhilaLink" target='_blank'>Philadelphia Link - To aging and disability resources</a>
-									</li>
-									<li role="presentation" class="divider"></li>
-									<li role="presentation" class="dropdown-header">News</li>
-									<li role="presentation">
-										<a href='http://www.generocity.org/unlock-philly-maps-public-transit-and-business-accessibility-in-philadelphia/' target='_blank'>Generocity: Unlock Philly Maps Public Transit and Business Accessibility ...</a>
-									</li>
-									<li role="presentation">
-										<a href='http://www.nbcphiladelphia.com/news/local/Elevating-Accessibility-on-Mass-Transit-250853021.html' target='_blank'>NBC Philadelphia article: Elevating Accessiblity on Mass Transit</a>
-									</li>
-									<li role="presentation">
-										<a href="https://technical.ly/philly/2014/03/25/septa-wheelchair-accessible-app/" target='_blank'>Technical.ly Philly story</a>
-									</li>
-									<li role="presentation">
-										<a href="http://tyack.net/2013/10/08/transit-apps-for-philly-hackathon-2013-unlocking-philadelphia/" target='_blank'>Blog</a>
-									</li>
-									
-									
-									
-								</ul>
+                            <li <% if page=="places" %>class="active"<% end %>>
+								<a href="/places">Places</a>
 							</li>
 						</ul>
 					</div><!--/.nav-collapse -->
@@ -111,7 +61,7 @@
 				
 				<div id="footer">
       				<div class="container">
-        			<p class="muted credit">Copyright 2014 <a href='about'>Unlockphilly</a> Data posted on this site is provided AS IS. No guarantee of correctness or suitability for any purpose is implied.</p>
+        			<p class="muted credit">UNLOCKTEST ENV:- Data posted on this site is provided AS IS. No guarantee of correctness or suitability for any purpose is implied.</p>
       				</div>
     			</div>
 				
@@ -124,13 +74,17 @@
 
 					<!-- Placed at the end of the document so the pages load faster -->
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 					<!-- Latest compiled and minified JavaScript -->
 					<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 					<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
 					<script src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js'></script>
 					<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/Leaflet.fullscreen.min.js'></script>
 					<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js'></script>
-    				<script src="js/unlock-philadelphia.js"></script>
+					<script src="/js/unlock-philadelphia.js"></script>
+                    <script src="/js/reviews.js"></script>
+					<script src="/js/postreviews.js"></script>
+					<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 					
 					<script>
 						(function(i, s, o, g, r, a, m) {

@@ -6,10 +6,35 @@
 	cursor: pointer;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+    background: #eee;
+  }
+}
+
+
+input:focus, input:active, label:active, label:focus, input[type="radio"]:checked+label, input[type="checkbox"]:checked+label {
+/*  color: #fff !important;*/
+/*  background-color: #ba2710 !important;*/
+    color: #000 !important;
+    background-color: #47b0cc !important;
+}
+
+.form-control {
+    color: #000;
+}
+
 #map {
 	height: 300px;
 }
 
+label.error {
+    color: red;
+    width: 100%;   
+}
 
 @media (min-height:650px) {
 
@@ -33,7 +58,8 @@
 
 #footer {
 	background-color: #F5F5F5;
-	height: 30px;
+/*	height: 30px;*/
+    height: auto;
 }
 
 .red {
@@ -109,7 +135,8 @@ body {
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-	height: 60px;
+	/* height: 60px; */
+    height: auto;
 }
 #footer {
 	background-color: #f5f5f5;
@@ -126,4 +153,5 @@ body {
 
 .container .credit {
         margin: 20px 0;
-      }
+        text-align: center;
+}
